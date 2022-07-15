@@ -4,3 +4,4 @@
 Brain-even demonstration: https://asciinema.org/a/WNKoA7PiR6YBysNqPnsCMYwaj
 Brain-calc demonstration: https://asciinema.org/a/IYzTpvIT9qbsLt92qWonj04EK
 Brain-gcd demonstration: https://asciinema.org/a/f1C5qsBjCSpPoMgdJmCPdiE1x
+Brain-progression demonstration: https://asciinema.org/a/7Ev67rglOhQHfACNDhUyEKVMj
