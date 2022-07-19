@@ -11,10 +11,10 @@ try_count = 0
 def is_prime():
     number = random.randint(1, 100)
     sqrt_number = round(math.sqrt(number))
-    dividors = []
+    divisors = []
     for i in range(2, sqrt_number + 1):
-        dividors.append(number % i)
-    if number == 2 or 0 not in dividors:
+        divisors.append(number % i)
+    if number == 2 or 0 not in divisors:
         return number, True
     else:
         return number, False
