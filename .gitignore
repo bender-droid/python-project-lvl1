@@ -1,4 +1,4 @@
 # ignored folders
-.venv
-dist
-__pycache__
+**/.venv
+**/dist
+**/__pycache__
