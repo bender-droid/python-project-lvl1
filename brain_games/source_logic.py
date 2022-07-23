@@ -1,13 +1,19 @@
 import prompt
+from brain_games.games.brain_even import even
+from brain_games.games.brain_calc import calc
+from brain_games.games.brain_progression import progression
+from brain_games.games.brain_gcd import gcd
+from brain_games.games.brain_prime import prime
 
 
 def welcome_user():
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
+    print(f"Hello, {name}")
     return name
 
 
-def cycle(type, name, rounds=3):
+def cycle(type, name, task, rounds=3):
     try_count = 0
     while try_count < rounds:
         if type == "even":
