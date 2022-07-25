@@ -1,9 +1,4 @@
 import prompt
-from brain_games.games.brain_even import even
-from brain_games.games.brain_calc import calc
-from brain_games.games.brain_progression import progression
-from brain_games.games.brain_gcd import gcd
-from brain_games.games.brain_prime import prime
 
 
 def welcome_user():
@@ -13,25 +8,14 @@ def welcome_user():
     return name
 
 
-def cycle(type, name, task, rounds=3):
+def cycle(game, name, task, rounds=3):
     try_count = 0
     while try_count < rounds:
-        if type == "even":
-            quiz, correct_answer = even()
-        elif type == "calc":
-            quiz, correct_answer = calc()
-        elif type == "progression":
-            quiz, correct_answer = progression()
-        elif type == "gcd":
-            quiz, correct_answer = gcd()
-        elif type == "prime":
-            quiz, correct_answer = prime()
-        else:
-            print("Type name is missing or incorrect")
+        quiz, correct_answer = game()
         print(task)
         print(f"Question: {quiz}")
-        user_answer = input("Your answer is: ")
-        if str(correct_answer) == str(user_answer):
+        user_answer = prompt.string("Your answer is: ")
+        if str(correct_answer) == user_answer:
             print("Correct")
             try_count += 1
         else:
