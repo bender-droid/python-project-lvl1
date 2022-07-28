@@ -1,18 +1,14 @@
 import prompt
 
 
-def welcome_user():
+def run_game(game_type, TASK, rounds=3):
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}")
-    return name
-
-
-def cycle(game, name, task, rounds=3):
+    print(TASK)
     try_count = 0
     while try_count < rounds:
-        quiz, correct_answer = game()
-        print(task)
+        quiz, correct_answer = game_type()
         print(f"Question: {quiz}")
         user_answer = prompt.string("Your answer is: ")
         if str(correct_answer) == user_answer:

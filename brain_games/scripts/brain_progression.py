@@ -1,13 +1,12 @@
 #!/usr/bin/env python
-from brain_games.source_logic import welcome_user, cycle
+from brain_games.source_logic import run_game
 from brain_games.games.brain_progression import progression
 
-task = "What number is missing in the progression?"
-name = welcome_user()
+TASK = "What number is missing in the progression?"
 
 
 def main():
-    cycle(progression, name, task)
+    run_game(progression, TASK)
 
 
 if __name__ == "__main__":

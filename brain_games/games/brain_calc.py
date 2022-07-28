@@ -3,18 +3,14 @@ import random
 
 def calc():
     operators = "+-*"
-    first_operand = random.randint(0, 100)
+    OPERAND_1 = random.randint(0, 100)
     operator = operators[random.randint(0, 2)]
-    second_operand = random.randint(0, 100)
+    OPERAND_2 = random.randint(0, 100)
+    quiz = (f"{OPERAND_1} {operator} {OPERAND_2}")
     if operator == "+":
-        quiz = (f"{first_operand} {operator} {second_operand}")
-        correct_answer = first_operand + second_operand
-        return quiz, correct_answer
+        correct_answer = OPERAND_1 + OPERAND_2
     elif operator == "-":
-        quiz = (f"{first_operand} {operator} {second_operand}")
-        correct_answer = first_operand - second_operand
-        return quiz, correct_answer
+        correct_answer = OPERAND_1 - OPERAND_2
     elif operator == "*":
-        quiz = (f"{first_operand} {operator} {second_operand}")
-        correct_answer = first_operand * second_operand
-        return quiz, correct_answer
+        correct_answer = OPERAND_1 * OPERAND_2
+    return quiz, correct_answer

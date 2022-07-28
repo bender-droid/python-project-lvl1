@@ -1,13 +1,12 @@
 #!/usr/bin/env python
-from brain_games.source_logic import welcome_user, cycle
+from brain_games.source_logic import run_game
 from brain_games.games.brain_calc import calc
 
-task = "What is the result of the expression?"
-name = welcome_user()
+TASK = "What is the result of the expression?"
 
 
 def main():
-    cycle(calc, name, task)
+    run_game(calc, TASK)
 
 
 if __name__ == "__main__":

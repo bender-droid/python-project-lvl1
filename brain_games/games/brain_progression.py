@@ -2,12 +2,12 @@ import random
 
 
 def progression():
-    sequence_start = random.randint(1, 80)
-    sequence_step = random.randint(1, 6)
-    sequence_length = random.randint(8, 13)
-    sequence_stop = sequence_start + (sequence_length - 1) * sequence_step
+    SEQ_START = random.randint(1, 80)
+    SEQ_STEP = random.randint(1, 6)
+    SEQ_LENGTH = random.randint(8, 13)
+    SEQ_STOP = SEQ_START + (SEQ_LENGTH - 1) * SEQ_STEP
     sequence = []
-    for i in range(sequence_start, sequence_stop + 1, sequence_step):
+    for i in range(SEQ_START, SEQ_STOP + 1, SEQ_STEP):
         sequence.append(i)
     hid_num_index = random.randint(0, len(sequence) - 1)
     hidden_number = ".."

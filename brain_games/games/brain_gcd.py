@@ -2,9 +2,9 @@ import random
 
 
 def gcd():
-    first_num = random.randint(1, 100)
-    second_num = random.randint(1, 100)
-    quiz = (f"{first_num} {second_num}")
-    while second_num > 0:
-        first_num, second_num = second_num, first_num % second_num
-    return quiz, first_num
+    NUMBER_1 = random.randint(1, 100)
+    NUMBER_2 = random.randint(1, 100)
+    quiz = (f"{NUMBER_1} {NUMBER_2}")
+    while NUMBER_2 > 0:
+        NUMBER_1, NUMBER_2 = NUMBER_2, NUMBER_1 % NUMBER_2
+    return quiz, NUMBER_1
