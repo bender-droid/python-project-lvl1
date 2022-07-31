@@ -1,16 +1,16 @@
-import random
+from random import randint
 
 
-def calc():
+def brain_calc():
     operators = "+-*"
-    OPERAND_1 = random.randint(0, 100)
-    operator = operators[random.randint(0, 2)]
-    OPERAND_2 = random.randint(0, 100)
-    quiz = (f"{OPERAND_1} {operator} {OPERAND_2}")
+    operand_1 = randint(1, 100)
+    operator = operators[randint(0, 2)]
+    operand_2 = randint(1, 100)
+    quiz = f"{operand_1} {operator} {operand_2}"
     if operator == "+":
-        correct_answer = OPERAND_1 + OPERAND_2
+        correct_answer = operand_1 + operand_2
     elif operator == "-":
-        correct_answer = OPERAND_1 - OPERAND_2
+        correct_answer = operand_1 - operand_2
     elif operator == "*":
-        correct_answer = OPERAND_1 * OPERAND_2
+        correct_answer = operand_1 * operand_2
     return quiz, correct_answer

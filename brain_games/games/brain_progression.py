@@ -1,15 +1,15 @@
-import random
+from random import randint
 
 
-def progression():
-    SEQ_START = random.randint(1, 80)
-    SEQ_STEP = random.randint(1, 6)
-    SEQ_LENGTH = random.randint(8, 13)
-    SEQ_STOP = SEQ_START + (SEQ_LENGTH - 1) * SEQ_STEP
+def brain_progression():
+    seq_start = randint(1, 80)
+    seq_step = randint(1, 6)
+    seq_length = randint(8, 13)
+    seq_stop = seq_start + (seq_length - 1) * seq_step
     sequence = []
-    for i in range(SEQ_START, SEQ_STOP + 1, SEQ_STEP):
+    for i in range(seq_start, seq_stop + 1, seq_step):
         sequence.append(i)
-    hid_num_index = random.randint(0, len(sequence) - 1)
+    hid_num_index = randint(0, len(sequence) - 1)
     hidden_number = ".."
     correct_answer = sequence[hid_num_index]
     sequence[hid_num_index] = hidden_number

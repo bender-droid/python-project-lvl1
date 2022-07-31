@@ -1,4 +1,5 @@
 # ignored folders
+**/.idea/
 **/.venv/
 **/dist/
 **/__pycache__/

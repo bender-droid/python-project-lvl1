@@ -1,14 +1,19 @@
-import math
-import random
+from math import sqrt
+from random import randint
 
 
-def prime():
-    NUMBER = random.randint(1, 100)
-    NUMBER_SQRT = round(math.sqrt(NUMBER))
+def is_prime(number):
+    number_sqrt = round(sqrt(number))
     divisors = []
-    for i in range(2, NUMBER_SQRT + 1):
-        divisors.append(NUMBER % i)
-    if NUMBER == 2 or 0 not in divisors:
-        return NUMBER, "yes"
-    else:
-        return NUMBER, "no"
+    for i in range(2, number_sqrt + 1):
+        divisors.append(number % i)
+    if number == 2 or 0 not in divisors:
+        return True
+    return False
+
+
+def brain_prime():
+    number = randint(1, 100)
+    if is_prime(number):
+        return number, "yes"
+    return number, "no"

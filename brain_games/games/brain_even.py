@@ -1,8 +1,14 @@
-from random import random
+from random import randint
 
 
-def even():
-    NUMBER = round(random() * 100)
-    if NUMBER % 2 == 0:
-        return NUMBER, "yes"
-    return NUMBER, "no"
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    return False
+
+
+def brain_even():
+    number = randint(1, 100)
+    if is_even(number):
+        return number, "yes"
+    return number, "no"

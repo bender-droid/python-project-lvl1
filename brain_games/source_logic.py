@@ -1,11 +1,11 @@
 import prompt
 
 
-def run_game(game_type, TASK, rounds=3):
+def run_game(game_type, task, rounds=3):
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}")
-    print(TASK)
+    print(task)
     try_count = 0
     while try_count < rounds:
         quiz, correct_answer = game_type()
