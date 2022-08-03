@@ -1,12 +1,9 @@
 #!/usr/bin/env python
-from brain_games.source_logic import run_game
-from brain_games.games.brain_gcd import brain_gcd
-
-TASK = "Find the greatest common divisor of given numbers."
+from brain_games.games.brain_gcd import run_brain_gcd
 
 
 def main():
-    run_game(brain_gcd, TASK)
+    run_brain_gcd()
 
 
 if __name__ == "__main__":

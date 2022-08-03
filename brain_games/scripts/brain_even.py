@@ -1,12 +1,9 @@
 #!/usr/bin/env python
-from brain_games.source_logic import run_game
-from brain_games.games.brain_even import brain_even
-
-TASK = """Answer "yes" if the number is even, otherwise answer "no"."""
+from brain_games.games.brain_even import run_brain_even
 
 
 def main():
-    run_game(brain_even, TASK)
+    run_brain_even()
 
 
 if __name__ == "__main__":

@@ -1,4 +1,7 @@
 from random import randint
+from brain_games.brain_engine import run_game
+
+TASK = "What number is missing in the progression?"
 
 
 def brain_progression():
@@ -15,3 +18,7 @@ def brain_progression():
     sequence[hid_num_index] = hidden_number
     question = " ".join(map(str, sequence))
     return question, correct_answer
+
+
+def run_brain_progression():
+    run_game(brain_progression, TASK)
