@@ -17,6 +17,8 @@ def run_game(game_type, task):
             print("Correct!")
             try_count += 1
         else:
-            return print(f"""\"{user_answer}\" is wrong answer ;(.\
+            print(f"""\"{user_answer}\" is wrong answer ;(.\
  Correct answer was \"{correct_answer}\".\nLet's try again, {name}!""")
-    return print(f"""Congratulations, {name}!""")
+            return
+    print(f"""Congratulations, {name}!""")
+    return

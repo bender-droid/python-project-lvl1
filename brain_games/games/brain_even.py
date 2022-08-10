@@ -2,8 +2,8 @@ from random import randint
 from brain_games.brain_engine import run_game
 
 TASK = """Answer "yes" if the number is even, otherwise answer "no"."""
-BOTTOM_NUM = 1
-TOP_NUM = 100
+RANDOM_MIN_VALUE = 1
+RANDOM_MAX_VALUE = 100
 
 
 def is_even(number):
@@ -13,7 +13,7 @@ def is_even(number):
 
 
 def brain_even():
-    number = randint(BOTTOM_NUM, TOP_NUM)
+    number = randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
     if is_even(number):
         return number, "yes"
     return number, "no"

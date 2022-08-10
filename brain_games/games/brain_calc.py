@@ -2,15 +2,15 @@ from random import randint, choice
 from brain_games.brain_engine import run_game
 
 TASK = "What is the result of the expression?"
-BOTTOM_NUM = 1
-TOP_NUM = 100
+RANDOM_MIN_VALUE = 1
+RANDOM_MAX_VALUE = 100
 
 
 def brain_calc():
     operators = "+-*"
-    operand_1 = randint(BOTTOM_NUM, TOP_NUM)
+    operand_1 = randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
     operator = choice(operators)
-    operand_2 = randint(BOTTOM_NUM, TOP_NUM)
+    operand_2 = randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
     quiz = f"{operand_1} {operator} {operand_2}"
     if operator == "+":
         correct_answer = operand_1 + operand_2
