@@ -12,6 +12,8 @@ def is_prime(number):
     divisors = []
     for i in range(RANDOM_MIN_VALUE + 1, number_sqrt + 1):
         divisors.append(number % i)
+    if number == 1:
+        return False
     if number == 2 or 0 not in divisors:
         return True
     return False
