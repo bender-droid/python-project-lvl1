@@ -13,12 +13,11 @@ def run_game(game_type, task):
         quiz, correct_answer = game_type()
         print(f"Question: {quiz}")
         user_answer = prompt.string("Your answer is: ")
-        if str(correct_answer) == user_answer:
+        if correct_answer == user_answer:
             print("Correct!")
             try_count += 1
         else:
             print(f"""\"{user_answer}\" is wrong answer ;(.\
  Correct answer was \"{correct_answer}\".\nLet's try again, {name}!""")
             return
-    print(f"""Congratulations, {name}!""")
-    return
+    print(f"Congratulations, {name}!")

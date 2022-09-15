@@ -17,7 +17,7 @@ def brain_gcd():
     number_2 = randint(RANDOM_MIN_VALUE, RANDOM_MAX_VALUE)
     quiz = f"{number_1} {number_2}"
     result = find_gcd(number_1, number_2)
-    return quiz, result
+    return quiz, str(result)
 
 
 def run_brain_gcd():

@@ -18,7 +18,7 @@ def brain_calc():
         correct_answer = operand_1 - operand_2
     elif operator == "*":
         correct_answer = operand_1 * operand_2
-    return quiz, correct_answer
+    return quiz, str(correct_answer)
 
 
 def run_brain_calc():

@@ -23,7 +23,7 @@ def brain_progression():
     correct_answer = sequence[hid_num_index]
     sequence[hid_num_index] = hidden_number
     question = " ".join(map(str, sequence))
-    return question, correct_answer
+    return question, str(correct_answer)
 
 
 def run_brain_progression():
